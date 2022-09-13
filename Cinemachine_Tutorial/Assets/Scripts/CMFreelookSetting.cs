@@ -6,6 +6,7 @@ using Cinemachine;
 public class CMFreelookSetting : MonoBehaviour
 {
     CinemachineFreeLook freeLook;
+    public float scrollSpeed = 2000.0f;
     void Awake()
     {
         CinemachineCore.GetInputAxis = clickControl;
@@ -38,7 +39,11 @@ public class CMFreelookSetting : MonoBehaviour
 
     public float clickControl(string axis)
     {
-        if(Input.GetMouseButton(0))
+        float scroollWheel = Input.GetAxis("Mouse ScrollWheel");
+
+        freeLook.m_Lens.FieldOfView += scroollWheel * Time.deltaTime * scrollSpeed;
+
+        if (Input.GetMouseButton(0))
             return UnityEngine.Input.GetAxis(axis);
 
         return 0;
