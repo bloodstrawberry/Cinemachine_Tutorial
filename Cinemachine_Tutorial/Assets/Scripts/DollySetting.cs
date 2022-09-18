@@ -6,6 +6,7 @@ using Cinemachine;
 public class DollySetting : MonoBehaviour
 {
     CinemachineVirtualCamera vCam;
+    public CinemachineDollyCart cart;
 
     void Start()
     {
@@ -14,5 +15,7 @@ public class DollySetting : MonoBehaviour
         CinemachineTrackedDolly dolly = vCam.GetCinemachineComponent<CinemachineTrackedDolly>();
         
         dolly.m_AutoDolly.m_Enabled = true;
+
+        cart.m_Speed = 5.0f; // 카트 속도 조정
     }
 }
