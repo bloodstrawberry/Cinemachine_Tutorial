@@ -5,28 +5,25 @@ using Cinemachine;
 
 public class PrioritySetting : MonoBehaviour
 {
-    public CinemachineVirtualCamera vCam;
-    public CinemachineBlendListCamera blendListCam;
-    public CinemachineFreeLook freeLookCam;
+    public CinemachineVirtualCamera vCam1, vCam2, vCam3;
 
-    public void buttonVirtual()
+    public float time = 2.0f;
+
+    public void GoToVCam3()
     {
-        vCam.Priority = 11;
-        blendListCam.Priority = 10;
-        freeLookCam.Priority = 10;
+        vCam3.Priority = 12;
     }
 
-    public void buttonBlendList()
+    public void SwitchCamera()
     {
-        vCam.Priority = 10;
-        blendListCam.Priority = 11;
-        freeLookCam.Priority = 10;
+        vCam2.Priority = 11;
+        Invoke("GoToVCam3", time);
     }
 
-    public void buttonFreeLook()
+    public void RollBack()
     {
-        vCam.Priority = 10;
-        blendListCam.Priority = 10;
-        freeLookCam.Priority = 11;
+        vCam1.Priority = 10;
+        vCam2.Priority = 9;
+        vCam3.Priority = 9;
     }
 }

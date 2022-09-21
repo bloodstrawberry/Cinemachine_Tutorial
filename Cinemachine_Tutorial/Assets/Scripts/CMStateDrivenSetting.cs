@@ -34,7 +34,7 @@ public class CMStateDrivenSetting : MonoBehaviour
 
         vCamObj1.transform.SetParent(this.transform);
         vCamObj2.transform.SetParent(this.transform);
-        
+
         //stateDriven.m_Instructions[0].m_FullHash = Animator.StringToHash("Base Layer.InAir");
         //stateDriven.m_Instructions[1].m_FullHash = Animator.StringToHash("Base Layer.Idle Walk Run Blend");
 
@@ -51,6 +51,47 @@ public class CMStateDrivenSetting : MonoBehaviour
         stateDriven.m_Instructions[1].m_MinDuration = 2.0f;
     }
 
+
+    //int AddState(int hash, int parentHash, string displayName)
+    //{
+    //    if (parentHash != 0)
+    //        mStateParentLookup[hash] = parentHash;
+    //    mStateIndexLookup[hash] = mStates.Count;
+    //    mStateNames.Add(displayName);
+    //    mStates.Add(hash);
+    //    return hash;
+    //}
+
+    //void CollectStatesFromFSM(
+    //AnimatorStateMachine fsm, string hashPrefix, int parentHash, string displayPrefix)
+    //{
+    //    ChildAnimatorState[] states = fsm.states;
+    //    for (int i = 0; i < states.Length; i++)
+    //    {
+    //        AnimatorState state = states[i].state;
+    //        int hash = AddState(Animator.StringToHash(hashPrefix + state.name),
+    //            parentHash, displayPrefix + state.name);
+
+    //        Debug.Log(hash + " Base Layer " + state.name);
+    //        // Also process clips as pseudo-states, if more than 1 is present.
+    //        // Since they don't have hashes, we can manufacture some.
+    //        var clips = CollectClips(state.motion);
+    //        if (clips.Count > 1)
+    //        {
+    //            string substatePrefix = displayPrefix + state.name + ".";
+    //            foreach (AnimationClip c in clips)
+    //            {
+
+
+    //                AddState(
+    //                CinemachineStateDrivenCamera.CreateFakeHash(hash, c),
+    //                hash, substatePrefix + c.name);
+
+    //                Debug.Log(hash + " Sex Layer " + c.name);
+    //            }
+    //        }
+    //    }
+    //}
     private void Update()
     {
         //Debug.Log(stateDriven.m_Instructions[0].m_FullHash);
