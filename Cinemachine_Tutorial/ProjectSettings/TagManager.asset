@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -11,22 +12,22 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - LayerAA
+  - LayerAC
+  - LayerAN
+  - LayerAS
+  - LayerCA
+  - LayerCC
+  - LayerCN
+  - LayerCS
+  - LayerNA
+  - LayerNC
+  - LayerNN
+  - LayerNS
+  - LayerSA
+  - LayerSC
+  - LayerSN
+  - LayerSS
   - 
   - 
   - 
