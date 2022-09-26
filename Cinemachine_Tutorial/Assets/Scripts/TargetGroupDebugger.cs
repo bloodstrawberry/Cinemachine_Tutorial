@@ -4,7 +4,7 @@ using UnityEngine;
 using Cinemachine;
 
 [ExecuteInEditMode]
-public class TargetGroupDebuger : MonoBehaviour
+public class TargetGroupDebugger : MonoBehaviour
 {
     CinemachineTargetGroup targetGroup;
 
@@ -13,7 +13,6 @@ public class TargetGroupDebuger : MonoBehaviour
         targetGroup = this.GetComponent<CinemachineTargetGroup>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach(CinemachineTargetGroup.Target tg in targetGroup.m_Targets)
