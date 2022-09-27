@@ -39,9 +39,9 @@ public class CMFreelookSetting : MonoBehaviour
 
     public float clickControl(string axis)
     {
-        float scroollWheel = Input.GetAxis("Mouse ScrollWheel");
+        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
 
-        freeLook.m_Lens.FieldOfView += scroollWheel * Time.deltaTime * scrollSpeed;
+        freeLook.m_Lens.FieldOfView += scrollWheel * Time.deltaTime * scrollSpeed;
 
         if (Input.GetMouseButton(0))
             return UnityEngine.Input.GetAxis(axis);
